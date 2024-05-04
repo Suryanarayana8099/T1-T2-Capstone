@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.java.spring</groupId>
-  <artifactId>sample</artifactId>
+  <artifactId>spga</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>sample Maven Webapp</name>
+  <name>spga Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -87,6 +87,6 @@
             </configuration>
         </plugin>
     </plugins>
-    <finalName>sample</finalName>
+    <finalName>spga</finalName>
 </build>
 </project>
