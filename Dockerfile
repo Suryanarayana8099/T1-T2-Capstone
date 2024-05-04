@@ -1,4 +1,3 @@
-# Build a JAR File
 FROM maven:3.6.3-jdk-8-slim AS build
 WORKDIR /home/app/
 COPY . /home/app/
