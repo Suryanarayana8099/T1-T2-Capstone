@@ -1,6 +1,5 @@
 
 variable "aws_amis" {
-  description = "The AMI to use for setting up the instances."
   default = {
 
     "eu-central-1" = "ami-04f9a173520f395dd"
@@ -35,7 +34,7 @@ variable "master_instance_type" {
   default     = "t3.medium"
 }
 variable "jenkins_instance_type" {
-  description = "The instance type to use for the Kubernetes master."
+  description = "The instance type to use for the Kubernetes master"
   default     = "t3.medium"
 }
 
@@ -50,6 +49,5 @@ variable "node_count" {
 }
 
 variable "private_key_path" {
-  description = "The private key for connection to the instances as the user. Corresponds to the key_name variable."
   default     = "msaicharan-key-pair.pem"
 }
