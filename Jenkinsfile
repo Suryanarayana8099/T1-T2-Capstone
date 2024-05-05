@@ -42,7 +42,7 @@ pipeline {
            steps {
               sshagent(['k8s-cluster']) {
                script {
-                 def instanceId = sh(script: 'aws ec2 describe-instances --region eu-central-1 --filters "Name=tag:Name,Values=msaicharan-capstone-k8s-master" --query "Reservations[0].Instances[0].InstanceId"', returnStdout: true).trim()
+                 def instanceId = sh(script: 'aws ec2 describe-instances --region eu-central-1 --filters Name=tag:Name,Values=msaicharan-capstone-k8s-master Name=instance-state-name,Values=running --query "Reservations[0].Instances[0].InstanceId"', returnStdout: true).trim()
                  def instanceIp = sh(script: "aws ec2 describe-instances --region eu-central-1 --instance-ids ${instanceId} --query 'Reservations[0].Instances[0].PrivateIpAddress' --output text", returnStdout: true).trim()
                  sh 'cd $WORKSPACE'
                  sh "scp -o StrictHostKeyChecking=no webapp.yaml ubuntu@${instanceIp}:/home/ubuntu/"
