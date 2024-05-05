@@ -24,6 +24,12 @@ pipeline {
                 }
             }
         }
+
+        stage("Quality gate check") {
+            steps {
+                waitForQualityGate abortPipeline: true
+            }
+        }
         stage('Pushing to DockerHub') {
            steps {
                 withCredentials([usernamePassword(credentialsId: 'docker-credentials', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
