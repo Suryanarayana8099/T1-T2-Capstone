@@ -1,53 +1,38 @@
 
 variable "aws_amis" {
   default = {
-
     "eu-central-1" = "ami-04f9a173520f395dd"
-
   }
 }
-variable "vpc_id" {
-  default = "vpc-07dc4f6ce63b0dbc1"
-
-}
-variable "availability_zone" {
+variable "availability_zone_1" {
   default = "eu-central-1a"
 }
-
+variable "availability_zone_2" {
+  default = "eu-central-1b"
+}
 variable "aws_region" {
-  description = "The AWS region to create things in."
-  default     = "eu-central-1"
+  default = "eu-central-1"
 }
 
 variable "instance_user" {
-  description = "The user account to use on the instances to run the scripts."
-  default     = "ubuntu"
-}
-
-variable "key_name" {
-  description = "Name of the SSH keypair to use in AWS."
-  default     = "msaicharan-key-pair"
+  default = "ubuntu"
 }
 
 variable "master_instance_type" {
-  description = "The instance type to use for the Kubernetes master."
-  default     = "t3.medium"
+  default = "t3.medium"
 }
 variable "jenkins_instance_type" {
-  description = "The instance type to use for the Kubernetes master"
-  default     = "t3.medium"
+  default = "t3.large"
 }
 
 variable "node_instance_type" {
-  description = "The instance type to use for the Kubernetes nodes."
-  default     = "t3.medium"
+  default = "t3.medium"
 }
 
 variable "node_count" {
-  description = "The number of nodes in the cluster."
-  default     = "2"
+  default = "2"
 }
 
 variable "private_key_path" {
-  default     = "msaicharan-key-pair.pem"
+  default = "private.pem"
 }
