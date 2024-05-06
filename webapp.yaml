@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: capstone-spga
-        image: manoj8795/app:spga
+        image: manoj8795/app:capstone
         ports:
         - containerPort: 8080
         
