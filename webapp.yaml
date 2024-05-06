@@ -17,6 +17,7 @@ spec:
       containers:
       - name: capstone-spga
         image: manoj8795/app:capstone
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
         
